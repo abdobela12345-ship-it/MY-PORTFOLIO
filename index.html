@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdo Belal | Portfolio</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ABDO BELAL</div>
+        <div class="nav-links">
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('skills')">Skills</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="content-section">
+            <h1>Welcome to my space</h1>
+            <p>I am a Web Developer and AI enthusiast.</p>
+        </section>
+
+        <section id="skills" class="content-section" style="display:none;">
+            <h2>My Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="card"><h3>Web Development</h3><p>React, JS, HTML/CSS</p></div>
+                <div class="card"><h3>AI & Automation</h3><p>AI Tools, Content Creation</p></div>
+                <div class="card"><h3>Computers</h3><p>System Architecture, Git</p></div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section" style="display:none;">
+            <h2>Contact Me</h2>
+            <p>Let's build something great together!</p>
+            <a href="mailto:you@example.com" class="btn">Send an Email</a>
+        </section>
+    </main>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.content-section').forEach(s => s.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
